@@ -67,8 +67,46 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap.js" />
+    <Content Include="bootstrap.min.js" />
+    <Content Include="Css\bootstrap-theme.css" />
+    <Content Include="Css\bootstrap-theme.min.css" />
+    <Content Include="Css\bootstrap.css" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Css\bootstrap-theme.css.map" />
+    <Content Include="Css\bootstrap-theme.min.css.map" />
+    <Content Include="Css\bootstrap.css.map" />
+    <Content Include="Css\bootstrap.min.css.map" />
+    <None Include="jquery-3.3.1.intellisense.js" />
+    <Content Include="jquery-3.3.1.js" />
+    <Content Include="jquery-3.3.1.min.js" />
+    <Content Include="jquery-3.3.1.slim.js" />
+    <Content Include="jquery-3.3.1.slim.min.js" />
+    <Content Include="modernizr-2.8.3.js" />
     <Content Include="Project\Kriptolama.aspx" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +123,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jquery-3.3.1.min.map" />
+    <Content Include="jquery-3.3.1.slim.min.map" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
