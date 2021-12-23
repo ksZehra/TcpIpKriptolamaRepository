@@ -24,6 +24,24 @@ namespace ProjectKriptolama.Project
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// divError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divError;
+
+        /// <summary>
+        /// lbError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbError;
+
+        /// <summary>
         /// ddTurSec control.
         /// </summary>
         /// <remarks>
@@ -42,6 +60,15 @@ namespace ProjectKriptolama.Project
         protected global::System.Web.UI.WebControls.DropDownList ddAlgoritmaSec;
 
         /// <summary>
+        /// tbKey control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbKey;
+
+        /// <summary>
         /// tbPlainText control.
         /// </summary>
         /// <remarks>
@@ -51,13 +78,13 @@ namespace ProjectKriptolama.Project
         protected global::System.Web.UI.WebControls.TextBox tbPlainText;
 
         /// <summary>
-        /// tbKey control.
+        /// tbCipherText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbKey;
+        protected global::System.Web.UI.WebControls.TextBox tbCipherText;
 
         /// <summary>
         /// hfKey control.
@@ -76,5 +103,14 @@ namespace ProjectKriptolama.Project
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSifrele;
+
+        /// <summary>
+        /// btnDesifrele control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDesifrele;
     }
 }
