@@ -164,8 +164,8 @@ namespace ProjectKriptolama.Class
                         throw new Exception("Anahtar uzunluğu 8 karakterden farklı olamaz!");
                     }
 
-                    byte[] aryKey = Byte8(key); // BURAYA 8 bit string DEĞER GİRİN
-                    byte[] aryIV = Byte8(key); // BURAYA 8 bit string DEĞER GİRİN
+                    byte[] aryKey = Byte8(key); // 8 bit string DEĞER
+                    byte[] aryIV = Byte8(key); // 8 bit string DEĞER 
                     DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
                     MemoryStream ms = new MemoryStream();
                     CryptoStream cs = new CryptoStream(ms, cryptoProvider.CreateEncryptor(aryKey, aryIV), CryptoStreamMode.Write);
