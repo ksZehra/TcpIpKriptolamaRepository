@@ -131,14 +131,13 @@
         function functionClear() {
             $('#tbKey').val('');
             $('#tbPlainText').val('');
-            $('#tbCipherText').val('');
             $('#ddTurSec').val('0');
             $('#ddAlgoritmaSec').val('0');
             window.location.reload();
         }
 
         $("#btnSifrele").on('click', function () {
-            if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndanel') && $('#tbKey').val().length > 8) {
+            if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndael') && $('#tbKey').val().length > 8) {
                 window.alert('Anahtar uzunluğu 8 karakterden fazla olamaz!');
                 return false;
             }

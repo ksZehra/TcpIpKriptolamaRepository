@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 namespace ProjectKriptolama.Project
 {
     public partial class Kriptolama : System.Web.UI.Page
-    {      
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -52,7 +52,7 @@ namespace ProjectKriptolama.Project
                     ddAlgoritmaSec.Items.Add(new ListItem("DES", "DES"));
                     ddAlgoritmaSec.Items.Add(new ListItem("3DES", "3DES"));
                     ddAlgoritmaSec.Items.Add(new ListItem("RC2", "RC2"));
-                    ddAlgoritmaSec.Items.Add(new ListItem("Rijndanel", "Rijndanel"));
+                    ddAlgoritmaSec.Items.Add(new ListItem("Rijndael", "Rijndael"));
                     btnDesifrele.Visible = true;
                 }
                 else
@@ -107,7 +107,7 @@ namespace ProjectKriptolama.Project
                 {
                     cipherText = sifre.RC2Sifrele(tbPlainText.Text, tbKey.Text);
                 }
-                else if (ddAlgoritmaSec.SelectedValue == "Rijndanel")
+                else if (ddAlgoritmaSec.SelectedValue == "Rijndael")
                 {
                     cipherText = sifre.RijndaelSifrele(tbPlainText.Text, tbKey.Text);
                 }
@@ -145,7 +145,7 @@ namespace ProjectKriptolama.Project
                 {
                     plainText = sifre.RC2Coz(tbCipherText.Text, tbKey.Text);
                 }
-                else if (ddAlgoritmaSec.SelectedValue == "Rijndanel")
+                else if (ddAlgoritmaSec.SelectedValue == "Rijndael")
                 {
                     plainText = sifre.RijndaelCoz(tbCipherText.Text, tbKey.Text);
                 }

@@ -148,6 +148,8 @@ namespace ProjectKriptolama.Class
 
 
         #region SİMETRİK ŞİFRELEME - DEŞİFRELEME
+
+        //Key: 8 karakter string = 64 bit
         public string DESSifrele(string strGiris, string key)
         {
             try
@@ -164,8 +166,8 @@ namespace ProjectKriptolama.Class
                         throw new Exception("Anahtar uzunluğu 8 karakterden farklı olamaz!");
                     }
 
-                    byte[] aryKey = Byte8(key); // 8 bit string DEĞER
-                    byte[] aryIV = Byte8(key); // 8 bit string DEĞER 
+                    byte[] aryKey = Byte8(key); // 8 bit string Değer
+                    byte[] aryIV = Byte8(key); // 8 bit string Değer 
                     DESCryptoServiceProvider cryptoProvider = new DESCryptoServiceProvider();
                     MemoryStream ms = new MemoryStream();
                     CryptoStream cs = new CryptoStream(ms, cryptoProvider.CreateEncryptor(aryKey, aryIV), CryptoStreamMode.Write);
@@ -240,7 +242,7 @@ namespace ProjectKriptolama.Class
         }
 
 
-        //TripleDES algoritması 24 bit anahtar ve 8 bit iv değeri kullanır.
+        //TripleDES algoritması 24 karakter string key (168 bit) ve 8 karakter string iv (64 bit) değeri kullanır.
         public string TDESSifrele(string strGiris)
         {
             try
@@ -387,7 +389,7 @@ namespace ProjectKriptolama.Class
         }
 
 
-        //RC2 algoritması 8 bit anahtar ve 8 bit iv değeri kullan
+        //RC2 algoritması 8 karakter anahtar (64 bit) ve 8 karakter iv (64) değeri kullanır
         public string RC2Sifrele(string strGiris, string key)
         {
             try
@@ -404,8 +406,8 @@ namespace ProjectKriptolama.Class
                         throw new Exception("Anahtar uzunluğu 8 karakterden farklı olamaz!");
                     }
 
-                    byte[] aryKey = Byte8(key); //8 bit string
-                    byte[] aryIV = Byte8(key); //8 bit string
+                    byte[] aryKey = Byte8(key); //8 karakter string
+                    byte[] aryIV = Byte8(key); //8 karakter string
                     RC2CryptoServiceProvider dec = new RC2CryptoServiceProvider();
                     MemoryStream ms = new MemoryStream();
                     CryptoStream cs = new CryptoStream(ms, dec.CreateEncryptor(aryKey, aryIV), CryptoStreamMode.Write);
@@ -457,7 +459,7 @@ namespace ProjectKriptolama.Class
         }
 
 
-        //Rijndael algoritması 8 anahtar ve 16 bit iv değeri kullanır.
+        //Rijndael algoritması 8 karakter anahtar (64 bit) ve 16 karakter iv (128 bit) değeri kullanır.
         public string RijndaelSifrele(string strGiris, string key)
         {
             try
