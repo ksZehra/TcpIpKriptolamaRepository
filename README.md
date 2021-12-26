@@ -1,8 +1,8 @@
 
 ***Tcp / Ip Güvenliği (Kriptografik Sistemler)***
 
-Projede kullanıcıya iki tür şifreleme yöntemi sunulmuştur. Bunlardan biri hash algoritmaları diğeri ise simetrik şifreleme algoritmalarıdır.
+Projede kullanıcıya iki tür algortima yöntemi sunulmuştur. Bunlardan biri hash algoritmaları diğeri ise simetrik şifreleme algoritmalarıdır.
 
-Seçilen algoritmaya göre şifreleme gerçekleşmektedir. Hash fonksiyonları eski haline (plaintext) geri çevirelemediği için sadece şifreleme işeleme yapar.
+Seçilen algoritmaya göre şifreleme gerçekleşmektedir. Hash fonksiyonları eski haline (plaintext) geri çevrilemediği için sadece şifreleme işelemi yapar.
 
-Simetrik şifreleme seçildiğinde ise kullanıcıdan alınan key bilgisine göre metin şifrelenir ve aynı key ile şifre çözülür.
+Simetrik şifreleme seçildiğinde ise kullanıcıdan alınan key bilgisine göre metin şifrelenir ve aynı key ile şifrelenen metin çözülür.
