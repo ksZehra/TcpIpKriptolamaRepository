@@ -69,10 +69,10 @@
         <div class="row" style="padding: 0 10px 10px 10px; width: 99.5%; margin-left: 0.1%;">
             <div class="col-lg-12 col-md-12 col-sm-12" style="background-color: white; border: 1px solid #cccccc; padding: 25px 0 25px 0; border-radius: 5px;">
                 <div class="col-lg-12">
-                    <label class="labelClass">Kriptolama Türü Seç:</label>
+                    <label class="labelClass">Algoritma Türü Seç:</label>
                     <asp:DropDownList ID="ddTurSec" CssClass="fontClass" AutoPostBack="true" OnSelectedIndexChanged="ddTurSec_SelectedIndexChanged" runat="server" Style="width: auto; border-radius: 5px; border-color: #cccccc; height: 28px;">
                         <asp:ListItem Value="0" Text="Seçiniz"></asp:ListItem>
-                        <asp:ListItem Value="1" Text="Hash Şifreleme"></asp:ListItem>
+                        <asp:ListItem Value="1" Text="Hash"></asp:ListItem>
                         <asp:ListItem Value="2" Text="Simetrik Şifreleme"></asp:ListItem>
                     </asp:DropDownList>
                 </div>
@@ -86,12 +86,17 @@
                     <asp:TextBox ID="tbKey" runat="server" Height="28px" BorderWidth="1px" CssClass="tbBorderClass"></asp:TextBox>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12" style="padding-right: 0px !important;">
-                    <label class="labelClass">Şifrelenecek Metin:</label>
+                    <label class="labelClass">
+                        Şifrelenecek Metin
+                        <br />
+                        (Plain Text):</label>
                     <asp:TextBox ID="tbPlainText" runat="server" TextMode="MultiLine" Height="200px" Width="77%" CssClass="multilineHeightClass tbBorderClass"></asp:TextBox>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="padding-right: 0px !important;">
                     <div class="col-lg-12 col-md-12 col-sm-12" runat="server">
-                        <label class="labelClass">Şifrelenmiş Metin:</label>
+                        <label class="labelClass">Şifrelenmiş Metin
+                            <br />
+                            (Cipher Text):</label>
                         <asp:TextBox ID="tbCipherText" runat="server" TextMode="MultiLine" Height="200px" Width="77%" CssClass="multilineHeightClass tbBorderClass"></asp:TextBox>
                     </div>
                 </div>
@@ -131,6 +136,7 @@
         function functionClear() {
             $('#tbKey').val('');
             $('#tbPlainText').val('');
+            $('#tbCipherText').val('');
             $('#ddTurSec').val('0');
             $('#ddAlgoritmaSec').val('0');
             window.location.reload();
@@ -138,7 +144,7 @@
 
         $("#btnSifrele").on('click', function () {
             if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndael') && $('#tbKey').val().length > 8) {
-                window.alert('Anahtar uzunluğu 8 karakterden fazla olamaz!');
+                window.alert('Anahtar uzunluğu 8 karakterden (64 bit) fazla olamaz!');
                 return false;
             }
         });
