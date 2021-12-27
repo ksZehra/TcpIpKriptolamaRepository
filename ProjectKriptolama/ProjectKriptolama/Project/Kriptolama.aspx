@@ -94,7 +94,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6" style="padding-right: 0px !important;">
                     <div class="col-lg-12 col-md-12 col-sm-12" runat="server">
-                        <label class="labelClass">Şifrelenmiş Metin
+                        <label class="labelClass">
+                            Şifrelenmiş Metin
                             <br />
                             (Cipher Text):</label>
                         <asp:TextBox ID="tbCipherText" runat="server" TextMode="MultiLine" Height="200px" Width="77%" CssClass="multilineHeightClass tbBorderClass"></asp:TextBox>
@@ -143,8 +144,51 @@
         }
 
         $("#btnSifrele").on('click', function () {
-            if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndael') && $('#tbKey').val().length > 8) {
-                window.alert('Anahtar uzunluğu 8 karakterden (64 bit) fazla olamaz!');
+            if ($('#ddTurSec').val() == "0") {
+                window.alert('Algoritma türü seçiniz!');
+                return false;
+            }
+            else if ($('#ddAlgoritmaSec').val() == "0") {
+                window.alert('Algoritmayı seçiniz!');
+                return false;
+            }
+            else if ($('#tbPlainText').val() == "") {
+                window.alert('Şifrelenecek metni giriniz!');
+                return false;
+            }
+
+            if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndael') && $('#tbKey').val().length != 8) {
+                window.alert('Anahtar uzunluğu 8 karakterden (64 bit) farklı olamaz!');
+                return false;
+            }
+
+            if ($('#ddAlgoritmaSec').val() == '3DES' && $('#tbKey').val().length != 24) {
+                window.alert('Anahtar uzunluğu 24 karakterden (168 bit) farklı olamaz!');
+                return false;
+            }
+        });
+
+        $("#btnDesifrele").on('click', function () {
+            if ($('#ddTurSec').val() == "0") {
+                window.alert('Algoritma türü seçiniz!');
+                return false;
+            }
+            else if ($('#ddAlgoritmaSec').val() == "0") {
+                window.alert('Algoritmayı seçiniz!');
+                return false;
+            }
+            else if ($('#tbCipherText').val() == "") {
+                window.alert('Deşifrelenecek metni giriniz!');
+                return false;
+            }
+
+            if (($('#ddAlgoritmaSec').val() == 'DES' || $('#ddAlgoritmaSec').val() == 'RC2' || $('#ddAlgoritmaSec').val() == 'Rijndael') && $('#tbKey').val().length != 8) {
+                window.alert('Anahtar uzunluğu 24 karakterden (64 bit) farklı olamaz!');
+                return false;
+            }
+
+            if ($('#ddAlgoritmaSec').val() == '3DES' && $('#tbKey').val().length != 24) {
+                window.alert('Anahtar uzunluğu 24 karakterden (168 bit) farklı olamaz!');
                 return false;
             }
         });

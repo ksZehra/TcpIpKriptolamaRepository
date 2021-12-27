@@ -154,7 +154,7 @@ namespace ProjectKriptolama.Project
             }
             catch (Exception myExp)
             {
-                lbError.Text = myExp.ToString();
+                lbError.Text = myExp.Message.ToString();
                 divError.Style.Add("display", "block");
             }
         }
